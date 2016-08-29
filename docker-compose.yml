@@ -1,0 +1,20 @@
+version: '2'
+services:
+  master:
+    build: .
+    restart: never
+    command: roscore
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+      - /dev/dri:/dev/dri
+    environment:
+      - "DISPLAY"
+      - ROS_MASTER_URI=http://localhost:11311
+    mem_limit: 3g
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "5"
