@@ -18,7 +18,7 @@ WORKDIR /root/catkin_ws
 COPY roboy_control.rosinstall .
 RUN wstool init src roboy_control.rosinstall
 RUN wstool update -t src
-RUN /bin/bash /root/catkin_ws/src/flexrayusbinterface/install_libftd2.sh
+RUN /bin/bash /root/catkin_ws/src/flexrayusbinterface/install_libftd2_and_udev_rules.sh
 RUN rosdep install --from-paths src --ignore-src --rosdistro indigo
 
 
