@@ -1,5 +1,5 @@
 # docker_roboy_control
-Docker container for deploying the hardware-only roboy ros_control stack
+Docker container for deploying the roboy ros_control stack including Gazebo 5 and the simulation plugins
 
 Build me with
 
