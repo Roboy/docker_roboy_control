@@ -1,4 +1,5 @@
 - git: {local-name: roboy-ros-control, uri: 'https://github.com/Roboy/roboy-ros-control.git', version: feature/pure_hw}
 - git: {local-name: common_utilities, uri: 'https://github.com/Roboy/common_utilities.git', version: master}
 - git: {local-name: flexrayusbinterface, uri: 'https://github.com/Roboy/flexrayusbinterface.git', version: feature/rosinstall}
+- git: {local-name: roboy-ros-control-simulation, uri: 'https://github.com/Roboy/roboy-ros-control-simulation.git', version: develop}
 
