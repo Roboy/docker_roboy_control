@@ -23,9 +23,9 @@ COPY roboy_control.rosinstall .
 RUN wstool init src roboy_control.rosinstall
 RUN wstool update -t src
 RUN /bin/bash /root/catkin_ws/src/flexrayusbinterface/install_libftd2_and_udev_rules.sh
-RUN rosdep install -y --from-paths src --ignore-src --rosdistro indigo   --skip-keys gazebo -r
+RUN /bin/bash -c "source /opt/ros/indigo/setup.bash && rosdep install -y -r --from-paths src --ignore-src --rosdistro indigo   --skip-keys ros-indigo-gazebo-ros --skip-keys ros-indigo-gazebo-ros-control"
 
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN /bin/bash -c "source /opt/ros/indigo/setup.bash && \
-					catkin_make && source /root/catkin_ws/devel/setup.sh"git
+					catkin_make && source /root/catkin_ws/devel/setup.sh"
